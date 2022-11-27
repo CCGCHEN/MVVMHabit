@@ -11,8 +11,7 @@ ext {
     ]
     //version配置
     versions = [
-            "support-version": "1.0.0",
-            "junit-version"  : "4.12",
+            "support-version": "1.0.0"
     ]
     //support配置
     support = [
@@ -22,8 +21,7 @@ ext {
             'support-v13'             : "androidx.legacy:legacy-support-v13:${versions["support-version"]}",
             'support-fragment'        : "androidx.fragment:fragment:${versions["support-version"]}",
             'design'                  : "com.google.android.material:material:${versions["support-version"]}",
-            'animated-vector-drawable': "androidx.vectordrawable:vectordrawable-animated:${versions["support-version"]}",
-            'junit'                   : "junit:junit:${versions["junit-version"]}",
+            'animated-vector-drawable': "androidx.vectordrawable:vectordrawable-animated:${versions["support-version"]}"
     ]
     //依赖第三方配置
     dependencies = [
@@ -57,8 +55,6 @@ ext {
             //Google AAC
             "lifecycle-extensions"                 : "androidx.lifecycle:lifecycle-extensions:2.0.0",
             "lifecycle-compiler"                   : "androidx.lifecycle:lifecycle-compiler:2.0.0",
-            //MVVMHabit
-            "MVVMHabit"                            : "com.github.goldze:MVVMHabit:4.0.0",
     ]
 }
 
