@@ -1,4 +1,7 @@
-apply plugin: 'com.android.library'
+//apply plugin: 'com.android.library'
+plugins {
+    id 'com.android.library' apply true
+}
 android {
     compileSdkVersion rootProject.ext.android.compileSdkVersion
     defaultConfig {

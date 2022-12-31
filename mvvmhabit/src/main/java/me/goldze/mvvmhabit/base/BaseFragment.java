@@ -97,12 +97,17 @@ public abstract class BaseFragment<V extends ViewDataBinding, VM extends BaseVie
             viewModel = (VM) createViewModel(this, modelClass);
         }
         binding.setVariable(viewModelId, viewModel);
+        initCustomHandler();
         //支持LiveData绑定xml，数据改变，UI自动会更新
         binding.setLifecycleOwner(this);
         //让ViewModel拥有View的生命周期感应
         getLifecycle().addObserver(viewModel);
         //注入RxLifecycle生命周期
         viewModel.injectLifecycleProvider(this);
+    }
+
+    protected void initCustomHandler() {
+
     }
 
     /**

@@ -1,5 +1,7 @@
 package me.goldze.mvvmhabit.utils;
 
+import android.text.TextUtils;
+
 /**
  * Created by goldze on 2017/5/14.
  * 字符串相关工具类
@@ -182,5 +184,13 @@ public final class StringUtils {
             }
         }
         return new String(chars);
+    }
+
+    public static boolean isBlank(String filePath) {
+        return TextUtils.isEmpty(filePath);
+    }
+
+    public static boolean isNotEmpty(String startSymbols) {
+        return !TextUtils.isEmpty(startSymbols);
     }
 }

@@ -8,6 +8,19 @@
     <color name="blue">#0000FF</color>
     <color name="orange">#FFA500</color>
 
+    <color name="default_white">#ffffff</color>
+    <color name="default_gray">#12161a</color>
+    <color name="default_gray80">#364047</color>
+    <color name="default_gray75">#525E66</color>
+    <color name="default_gray50">#859199</color>
+    <color name="default_gray25">#AAB5BE</color>
+    <color name="default_gray15">#D4DADE</color>
+    <color name="default_gray10">#e0e5e8</color>
+    <color name="default_background_gray">#f5f6f7</color>
+    <color name="default_background_white">#ffffff</color>
+    <color name="default_black">#000000</color>
+    <color name="default_theme_color">#2696ff</color>
+
     <array name="in_colors_light">
         <item>#4B03A9F4</item>
         <item>#3303A9F4</item>

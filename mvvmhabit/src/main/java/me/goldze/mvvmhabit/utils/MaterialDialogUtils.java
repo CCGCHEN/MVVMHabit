@@ -37,9 +37,8 @@ public class MaterialDialogUtils {
                 .titleGravity(GravityEnum.CENTER)
                 .titleColorRes(R.color.white)
                 .contentColorRes(android.R.color.white)
-                .backgroundColorRes(R.color.material_blue_grey_800)
+                .backgroundColorRes(androidx.appcompat.R.color.material_blue_grey_800)
                 .dividerColorRes(R.color.white)
-                .btnSelector(R.drawable.md_selector, DialogAction.POSITIVE)
                 .positiveColor(Color.WHITE)
                 .negativeColorAttr(android.R.attr.textColorSecondaryInverse)
                 .theme(Theme.DARK)
@@ -184,6 +183,24 @@ public class MaterialDialogUtils {
 
     /***
      * 显示一个基础的对话框  带标题 带内容
+     * @param
+     * @return MaterialDialog.Builder
+     */
+    public static MaterialDialog.Builder showBasicDialog(final Context context, String
+            title, String content, boolean cancelOnTouchOutside) {
+
+        MaterialDialog.Builder builder = new MaterialDialog.Builder(context)
+                .title(title)
+                .content(content)
+                .positiveText("确定")
+                .canceledOnTouchOutside(cancelOnTouchOutside)
+                .negativeText("取消");
+
+        return builder;
+    }
+
+    /***
+     * 显示一个基础的对话框  带标题 带内容
      * @return MaterialDialog.Builder
      */
     public static MaterialDialog.Builder showBasicDialogPositive(final Context context, String
@@ -294,7 +311,7 @@ public class MaterialDialogUtils {
                     }
                 })
                 .alwaysCallMultiChoiceCallback()
-                .positiveText(R.string.md_choose_label)
+                .positiveText("Choose")
                 .autoDismiss(false)
                 .neutralText("clear")
                 .itemsDisabledIndices(0, 1);
