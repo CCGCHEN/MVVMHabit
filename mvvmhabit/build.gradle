@@ -77,4 +77,8 @@ dependencies {
     //Google LiveData和ViewModel组件
     api rootProject.ext.dependencies["lifecycle-extensions"]
     annotationProcessor rootProject.ext.dependencies["lifecycle-compiler"]
+
+    implementation 'com.just.agentweb:agentweb:4.1.2' // (必选)
+//    implementation 'com.just.agentweb:filechooser:4.1.2'// (可选)
+//    implementation 'com.download.library:Downloader:4.1.2'// (可选)
 }

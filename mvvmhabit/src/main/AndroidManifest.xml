@@ -11,6 +11,10 @@
             android:name=".crash.DefaultErrorActivity"
             android:process=":error_activity" />
 
+        <activity android:name="me.goldze.mvvmhabit.webview.OpenWebActivity"
+            android:hardwareAccelerated="true"
+            android:configChanges="orientation|screenSize"></activity>
+
         <provider
             android:name=".crash.CaocInitProvider"
             android:authorities="${applicationId}.customactivityoncrashinitprovider"

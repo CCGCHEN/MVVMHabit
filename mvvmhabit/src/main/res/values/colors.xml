@@ -21,6 +21,12 @@
     <color name="default_black">#000000</color>
     <color name="default_theme_color">#2696ff</color>
 
+    <color name="app_bg_color">#EFEFF4</color>
+    <color name="app_title_color">#f9f9f9</color>
+    <color name="app_theme_color">#008577</color>
+    <color name="app_background_color">#F0F0F0</color>
+
+
     <array name="in_colors_light">
         <item>#4B03A9F4</item>
         <item>#3303A9F4</item>
