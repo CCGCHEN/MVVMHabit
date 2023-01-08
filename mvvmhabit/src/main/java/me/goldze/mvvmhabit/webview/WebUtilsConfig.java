@@ -41,6 +41,16 @@ public class WebUtilsConfig implements Parcelable {
     private boolean useWideViewPort;
     private boolean loadWithOverviewMode;
     private int cacheMode = android.webkit.WebSettings.LOAD_DEFAULT;
+    private String title;
+
+    public String getTitle() {
+        return title;
+    }
+
+    public WebUtilsConfig setTitle(String title) {
+        this.title = title;
+        return this;
+    }
 
     public boolean isStateBarTextColorDark() {
         return isStateBarTextColorDark;
@@ -194,6 +204,7 @@ public class WebUtilsConfig implements Parcelable {
     @Override
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeString(this.backText);
+        dest.writeString(this.title);
         dest.writeByte(this.showBackText ? (byte) 1 : (byte) 0);
         dest.writeInt(this.titleBackgroundRes);
         dest.writeInt(this.titleBackgroundColor);
@@ -216,6 +227,7 @@ public class WebUtilsConfig implements Parcelable {
 
     protected WebUtilsConfig(Parcel in) {
         this.backText = in.readString();
+        this.title = in.readString();
         this.showBackText = in.readByte() != 0;
         this.titleBackgroundRes = in.readInt();
         this.titleBackgroundColor = in.readInt();

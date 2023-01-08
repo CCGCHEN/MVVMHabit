@@ -340,6 +340,7 @@ public class MaterialDialogUtils {
 
                     }
                 }).build();
+        dialog.show();
 
 //        positiveAction = dialog.getActionButton(DialogAction.POSITIVE);
 //        //noinspection ConstantConditions

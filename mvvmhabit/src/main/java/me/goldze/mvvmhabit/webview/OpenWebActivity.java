@@ -211,7 +211,7 @@ public class OpenWebActivity extends AppCompatActivity {
         @Override
         public void onReceivedTitle(WebView view, String title) {
             super.onReceivedTitle(view, title);
-            if (mTitleTextView != null) {
+            if (mTitleTextView != null && TextUtils.isEmpty(webConfig.getTitle())) {
                 mTitleTextView.setText(title);
             }
         }
@@ -260,6 +260,9 @@ public class OpenWebActivity extends AppCompatActivity {
             mTitleBack.setText("~".equals(webConfig.getBackText()) ? getResources().getString(R.string.str_web_back) : (webConfig.getBackText()));
         else {
             mTitleBack.setText("");
+        }
+        if (!TextUtils.isEmpty(webConfig.getTitle())) {
+            mTitleTextView.setText(webConfig.getTitle());
         }
         if (webConfig.getTitleBackgroundRes() != -1) {
             llWebTitle.setBackgroundResource(webConfig.getTitleBackgroundRes());
